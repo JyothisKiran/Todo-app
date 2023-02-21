@@ -1,0 +1,73 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <script src="https://kit.fontawesome.com/c08a1bc374.js" crossorigin="anonymous"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'tasklist.css' %}" />
+  </head>
+  <body>
+    {% if request.user.is_authenticated %}
+    <div class="navebar">
+      <div class="user"><p><span style="color:white"><i class="fa-solid fa-user"></i></span>  {{request.user}}</p></div>
+      <div class="but_box">
+        <div class="but">
+          <div class="but"><a href="{% url 'items' %}"><button class='but_1'>Refresh</button></a></div>
+          <div class="but1"><a href="{% url 'signin'  %}"><button class="logout">Logout</button></a></div>
+          <div class="but2"><a href="{% url 'create_items' %}"><button class='back'>Add task</button></a></div>
+        </div>
+      </div>
+  </div>
+    <div class="center">
+      <div class="main">
+        <table class='item'>
+          <th>Item</th>
+          <tr>
+            {% for task in items %}
+            {% if task.complete == True %}
+            <td class="title"><strike>{{task.title}}</strike></td>
+            {% else %}
+            <td class="title">{{task.title}}</td>
+            {% endif %}
+          </tr>
+          {% endfor %}
+        </table>
+        <table class='action'>
+          <th >Actions</th>
+          <tr>
+            {% for task in items %}
+            <td>
+              <a href="{% url 'detail_items' task.id %}"><button><i class="fa-regular fa-eye"></i></button></a>
+              <a href="{% url 'update_items' task.id %}"><button><i class="fa-solid fa-pen-to-square"></i></button></a>
+              <a href="{% url 'delete_items' task.id %}"
+                ><button><i class="fa-solid fa-trash"></i></button></a
+              >
+            </td>
+          </tr>
+          {% endfor %}
+        </table>
+      </div>
+    </div>
+    {% else %}
+    <div class="navebar">
+      <ul>
+        <div class="user"><li><p>Guest user</p></li></div>
+        {% comment %} <div class="but"><li><a href="{% url 'signin'  %}"><button class="logout">Logout</button></a></li>
+          <li>
+            <a href="{% url 'create_items'  %}"
+              ><button class="add_task">ADD TASK</button></a
+            >
+          </li></div> {% endcomment %}
+      </ul>
+    </div>
+    <div class="errormsg">
+      <h1>Please Sign up to add Tasks.</h1>
+      <div class="but"><li><a href="{% url 'signup'  %}"><button class="signup">Signup</button></a></li>
+
+    </div>
+    {% endif %}
+  </body>
+</html>

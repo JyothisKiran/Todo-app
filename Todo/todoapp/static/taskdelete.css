@@ -1,0 +1,74 @@
+body{
+    margin: 0px;
+    padding:0px;
+    background-color:white;
+    font-family:sans-serif;
+    background-image: url('../static/delete_bg.jpg');
+    background-size: cover;
+}
+
+.navebar{
+    background-color: rgba(0, 0, 0, 0.3);
+    color: rgb(255, 243, 243);
+    height:70px;
+    display: flex;
+}
+
+.navebar p{
+    font-size: 23px;
+}
+
+
+.user{
+    padding-left: 10px;
+    width:763px;
+}
+
+
+.but_box{
+    width: 763px;
+}
+
+.but{
+    padding-left: 500px;
+    padding-top: 10px;
+    display: flex;
+    gap: 35px;
+}
+
+
+.logout{
+    margin-top: 7.5px;
+    padding: 8px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.back{
+    margin-top: 7.5px;
+    padding: 8px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+
+form p{
+    font-size: larger;
+}
+form button{
+    padding: 8px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.box{
+    transform: translate(100%,90%);
+    background-color:rgba(218, 195, 77, 0.625);
+    text-align: center;
+    width:500px;
+    padding: 15px;
+}
+
+.box button{
+    padding-left: 15px;
+    padding-right: 15px; 
+}

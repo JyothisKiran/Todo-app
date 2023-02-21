@@ -1,0 +1,31 @@
+{% load  static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'home.css'%}">
+    <title>Home</title>
+</head>
+<body>
+    <div class="navebar">
+        <div class="user"><p style=font-weight:bold> TO-DO</p></div>
+        <div class="but_box">
+          <div class="but"><div class="but1"><a href="{% url 'signin'  %}"><button class="login">Login</button></a></div>
+            <div class="but2"><a href="{% url 'signup'  %}"><button class="logout">Register</button></a></div>
+          </div>
+        </div>
+    </div>
+    <div class="contents">
+        <div class="title">
+            <h1>To-do</h1>
+        </div>
+        <div class="moto">
+            <p style= color:white>Add your tasks.<br>
+                Organize your life.<br>
+                Achieve more every day.</p>
+        </div>
+    </div>
+</body>
+</html>

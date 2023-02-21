@@ -1,0 +1,32 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{% static 'taskcreate.css' %}" />
+    <title>Create A Task</title>
+  </head>
+  <body>
+    <div class="navebar">
+      <div class="user"><p><span style="color:white"><i class="fa-solid fa-user"></i></span>  {{request.user}}</p></div>
+      <div class="but_box">
+        <div class="but"><div class="but1"><a href="{% url 'signin'  %}"><button class="logout">Logout</button></a></div>
+          <div class="but2"><a href="{% url 'items' %}"><button class='back'>Go back</button></a></div>
+        </div>
+      </div>
+  </div>
+    <div class="create_box">
+      <h1>ADD TASK</h1>
+    <form method="post">
+          {% csrf_token %}
+           <div class="divform">
+            {{form.as_p}}
+           </div>
+  
+          <button class= 'submit' type='submit' >Submit</button>
+  </form>
+</div>
+  </body>
+</html>

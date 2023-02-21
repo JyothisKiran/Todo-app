@@ -1,0 +1,74 @@
+body{
+    margin: 0px;
+    padding: 0px;
+    background-color: white;
+    font-family: sans-serif;
+    background-image: url('../static/signup_bg.jpg');
+    background-size: cover;
+}
+
+.box {
+     padding-top: 15px;
+    padding-bottom: 15px;
+    width: 400px;
+    background-color: rgba(108, 119, 245, 0.3);
+    text-align: center;
+    transform: translate(220%,20%);
+    border-radius: 20px;
+}
+
+.box h1{
+    font-size: 40px;
+    color: aliceblue;
+}
+
+form input{
+    font-size: 17px;
+    margin: 10px;
+    width: 350px;
+    height: 30px;
+    border-radius: 10px;
+    border-style: none;
+}
+
+
+form button{
+    font-size: 17px;
+    margin: 8px;
+    width: 350px;
+    height: 40px;
+    border-radius: 5px;
+    border-style: none;
+}
+
+p{
+    color: rgb(9, 190, 190);
+    font-size: large;
+}
+
+p a{
+    color: rgb(153, 248, 248);
+    text-decoration: None;
+}
+
+.fb button{
+    font-size: 17px;
+    color: white;
+    background-color: rgb(62, 62, 204);
+    margin:10px;
+    width: 350px;
+    height: 40px;
+    border-radius: 5px;
+    border-style: none;
+}
+
+.google button{
+    font-size: 17px;
+    color: black;
+    background-color: white;
+    margin:10px;
+    width: 350px;
+    height: 40px;
+    border-radius: 5px;
+    border-style: none;
+}

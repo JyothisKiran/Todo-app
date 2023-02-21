@@ -1,0 +1,37 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://kit.fontawesome.com/c08a1bc374.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="{% static 'taskdetail.css' %}" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="navebar">
+      <div class="user"><p><span style="color:white"><i class="fa-solid fa-user"></i></span>  {{request.user}}</p></div>
+      <div class="but_box">
+        <div class="but"><div class="but1"><a href="{% url 'signin'  %}"><button class="logout">Logout</button></a></div>
+          <div class="but2"><a href="{% url 'items' %}"><button class='back'>Go back</button></a></div>
+        </div>
+      </div>
+  </div>
+    <div class="box">
+      <div class="box_details">
+        {% csrf_token %}
+        <div class="doc"><p><b>{{task.create}}</b></p></div>
+        <div class="title"><p><b>Title</b>:{{task.title}}</p></div>
+        <div class="status">
+          {% if task.complete == True %}
+          <p><b>Status</b>:Complete</p>
+          {%else %}
+          <p><b>Status</b>:Ongoing</p>
+          {% endif %}
+        </div>
+        <div class="description"><p><b><span style ='color:blue'>To do</span></b>:{{task.description}}</p></div>
+      </div>
+    </div>
+  </body>
+</html>

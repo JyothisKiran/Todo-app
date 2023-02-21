@@ -1,0 +1,30 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://kit.fontawesome.com/c08a1bc374.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="{% static 'taskdelete.css' %}" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="navebar">
+      <div class="user"><p><span style="color:white"><i class="fa-solid fa-user"></i></span>  {{request.user}}</p></div>
+      <div class="but_box">
+        <div class="but"><div class="but1"><a href="{% url 'signin'  %}"><button class="logout">Logout</button></a></div>
+          <div class="but2"><a href="{% url 'items' %}"><button class='back'>Go back</button></a></div>
+        </div>
+      </div>
+  </div>
+    <div class="box">
+      <form method="post" action="">
+        {% csrf_token %}
+        <p>Are you sure you want to delete this item?</p>
+        <button>Yes</button><br /><br />
+      </form>
+      <a href="{% url 'items' %}"><button class="back">NO</button></a>
+    </div>
+  </body>
+</html>

@@ -22,15 +22,15 @@
       <div class="box_details">
         {% csrf_token %}
         <div class="doc"><p><b>{{task.create}}</b></p></div>
-        <div class="title"><p><b>Title</b>:{{task.title}}</p></div>
+        <div class="title"><p><b>Task</b>:{{task.title}}</p></div>
         <div class="status">
           {% if task.complete == True %}
-          <p><b>Status</b>:Complete</p>
+          <p><b><span style ='color:grey'>Status</span></b>:<span style ='color:green'>Complete</span></p>
           {%else %}
-          <p><b>Status</b>:Ongoing</p>
+          <p><b><span style ='color:grey'>Status</span></b>:<span style ='color:red'>Ongoing</span></p>
           {% endif %}
         </div>
-        <div class="description"><p><b><span style ='color:blue'>To do</span></b>:{{task.description}}</p></div>
+        <div class="description"><p><b><span style ='color:grey'>Brief</span></b>:{{task.description}}</p></div>
       </div>
     </div>
   </body>

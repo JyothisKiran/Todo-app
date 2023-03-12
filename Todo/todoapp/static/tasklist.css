@@ -3,7 +3,7 @@ body{
     padding:0px;
     background-color:white;
     font-family:sans-serif;
-    background-image: url('../static/list_bg.jpg');
+    background-image: url('../static/detail_bg.jpg');
     background-size: cover;
 }
 
@@ -69,18 +69,24 @@ h1{
 .center{
     margin-top: -20px;
     padding-top: 20px;
-    /* background-color: aliceblue;
-    width:470px; */
-    height:683px;
-    transform: translate(0%,10%);
+    /* background-color: aliceblue; */
+    width:470px;
+    
+    
 }
+
+.titlediv{
+    transform: translate(160%,70%);
+    font-size: 30px;
+}
+
 .main{
     font-size: 30px;
     padding: 10px;
     margin-bottom: 10px;
-    background-color:rgba(182, 225, 10, 0.7);
+    /* background-color:rgba(182, 225, 10, 0.7); */
     width: 460px;
-    transform: translate(120%);
+    transform: translate(160%,5%);
     display: flex;
     gap: 70px;
     border-radius: 30px;
@@ -109,7 +115,6 @@ table button{
     background-color: rgba(34, 167, 182, 0.7);
 }
 
-.item{
-    margin-right: 55px;
-}
+
+
 

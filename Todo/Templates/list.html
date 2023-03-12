@@ -22,9 +22,12 @@
       </div>
   </div>
     <div class="center">
+      <div class="titlediv">
+        <h1>To-do</h1>
+      </div>
       <div class="main">
+        
         <table class='item'>
-          <th>Item</th>
           <tr>
             {% for task in items %}
             {% if task.complete == True %}
@@ -36,7 +39,6 @@
           {% endfor %}
         </table>
         <table class='action'>
-          <th >Actions</th>
           <tr>
             {% for task in items %}
             <td>
